@@ -6,7 +6,7 @@ import showService from "../services/showService";
 import { useAuth } from "../context/AuthContext";
 import { useToast } from "../components/Toast";
 
-const BASE = "http://3.6.90.198:8080/api";
+const BASE = "https://bookmyshow.ddns.net/api";
 
 export default function MovieDetail() {
   const { id } = useParams();
