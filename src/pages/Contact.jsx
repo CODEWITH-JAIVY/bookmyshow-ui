@@ -1,8 +1,47 @@
 import React, { useState } from "react";
 import devImage from "./codewithjaivy image.jpeg";
 
-const CONTACTS = [
+// ── Add your teammates' images here (same way as devImage) ──
+// import yashImage from "./yash.jpeg";
+// import tanuImage from "./tanu.jpeg";
+// import vivekImage from "./vivek.jpeg";
+// Then replace the placeholder initials avatar with <img> tags (see TEAM_MEMBERS below)
+
+const TEAM_MEMBERS = [
   {
+    name: "Sanjeet Kumar",
+    role: "Full Stack Developer",
+    image: devImage,       // real image already imported
+    initials: null,
+    color: "#e50914",
+  },
+  {
+    name: "Yash Chaudhary",
+    role: "Team Member",
+    image: null,           // replace null with yashImage once imported
+    initials: "YC",
+    color: "#0077b5",
+  },
+  {
+    name: "Tanu Sharma",
+    role: "Team Member",
+    image: null,           // replace null with tanuImage once imported
+    initials: "TS",
+    color: "#e1306c",
+  },
+  {
+    name: "Vivek Singh",
+    role: "Team Member",
+    image: null,           // replace null with vivekImage once imported
+    initials: "VS",
+    color: "#25d366",
+  },
+];
+
+const CONTACTS = [
+  // ── SANJEET ──────────────────────────────────────────────
+  {
+    member: "Sanjeet Kumar",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
         <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
@@ -18,6 +57,7 @@ const CONTACTS = [
     desc: "Connect professionally",
   },
   {
+    member: "Sanjeet Kumar",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
@@ -32,6 +72,7 @@ const CONTACTS = [
     desc: "Check out my projects",
   },
   {
+    member: "Sanjeet Kumar",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
@@ -46,6 +87,7 @@ const CONTACTS = [
     desc: "Follow for coding content",
   },
   {
+    member: "Sanjeet Kumar",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -60,6 +102,7 @@ const CONTACTS = [
     desc: "Drop me a mail",
   },
   {
+    member: "Sanjeet Kumar",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
         <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
@@ -73,10 +116,103 @@ const CONTACTS = [
     border: "rgba(37,211,102,0.25)",
     desc: "Call or WhatsApp me",
   },
+
+  // ── YASH CHAUDHARY ───────────────────────────────────────
+  {
+    member: "Yash Chaudhary",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+    ),
+    platform: "Email",
+    handle: "yashchaudhary8756@gmail.com",
+    href: "mailto:yashchaudhary8756@gmail.com",
+    color: "#ea4335",
+    bg: "rgba(234,67,53,0.1)",
+    border: "rgba(234,67,53,0.25)",
+    desc: "Drop Yash a mail",
+  },
+
+  // ── TANU SHARMA ──────────────────────────────────────────
+  {
+    member: "Tanu Sharma",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+    ),
+    platform: "Email",
+    handle: "tanubhardwaj7983@gmail.com",
+    href: "mailto:tanubhardwaj7983@gmail.com",
+    color: "#ea4335",
+    bg: "rgba(234,67,53,0.1)",
+    border: "rgba(234,67,53,0.25)",
+    desc: "Drop Tanu a mail",
+  },
+
+  // ── VIVEK SINGH ──────────────────────────────────────────
+  {
+    member: "Vivek Singh",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+    ),
+    platform: "Email",
+    handle: "viveksinghnanu1900@gmail.com",
+    href: "mailto:viveksinghnanu1900@gmail.com",
+    color: "#ea4335",
+    bg: "rgba(234,67,53,0.1)",
+    border: "rgba(234,67,53,0.25)",
+    desc: "Drop Vivek a mail",
+  },
 ];
+
+// Helper: avatar with image or colored initials fallback
+function Avatar({ member }) {
+  return (
+    <div
+      style={{
+        width: 80,
+        height: 80,
+        borderRadius: "50%",
+        overflow: "hidden",
+        border: `3px solid ${member.color}`,
+        boxShadow: `0 0 0 3px ${member.color}33`,
+        flexShrink: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: member.image ? "transparent" : `${member.color}22`,
+        fontSize: "1.5rem",
+        fontWeight: 800,
+        color: member.color,
+      }}
+    >
+      {member.image ? (
+        <img
+          src={member.image}
+          alt={member.name}
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+        />
+      ) : (
+        member.initials
+      )}
+    </div>
+  );
+}
 
 export default function Contact() {
   const [copied, setCopied] = useState(null);
+  const [activeTab, setActiveTab] = useState("All");
+
+  const tabs = ["All", ...TEAM_MEMBERS.map((m) => m.name.split(" ")[0])];
+
+  const filteredContacts =
+    activeTab === "All"
+      ? CONTACTS
+      : CONTACTS.filter((c) => c.member.startsWith(activeTab));
 
   const copyToClipboard = (text, key) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -107,63 +243,42 @@ export default function Contact() {
           transform: translateY(-2px);
           filter: brightness(1.1);
         }
+        .tab-btn {
+          transition: all 0.2s ease;
+          cursor: pointer;
+          border: none;
+          background: none;
+        }
+        .tab-btn:hover {
+          filter: brightness(1.2);
+        }
       `}</style>
 
-      {/* Hero */}
-      <div
-        style={{
-          textAlign: "center",
-          padding: "2.5rem 0 2rem",
-          animation: "fadeUp 0.3s ease",
-        }}
-      >
-        {/* Avatar */}
-        <div
-          style={{
-            width: 100,
-            height: 100,
-            borderRadius: "50%",
-            margin: "0 auto 1rem",
-            boxShadow:
-              "0 0 0 4px rgba(229,9,20,0.3), 0 0 0 8px rgba(229,9,20,0.1)",
-            overflow: "hidden",
-            flexShrink: 0,
-          }}
-        >
-          <img
-            src={devImage}
-            alt="Sanjeet Kumar"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "top",
-            }}
-          />
+      {/* ── HERO ── */}
+      <div style={{ textAlign: "center", padding: "2.5rem 0 1.5rem", animation: "fadeUp 0.3s ease" }}>
+        <h1 style={{ fontSize: "1.8rem", fontWeight: 800, margin: "0 0 0.25rem" }}>
+          Meet the Team
+        </h1>
+        <p style={{ color: "var(--text-muted, #888)", margin: "0 0 1.5rem", fontSize: "1rem" }}>
+          BookMyShow Clone · Full Stack Project
+        </p>
+
+        {/* Team avatars row */}
+        <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
+          {TEAM_MEMBERS.map((m) => (
+            <div
+              key={m.name}
+              style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.4rem", cursor: "pointer" }}
+              onClick={() => setActiveTab(m.name.split(" ")[0])}
+            >
+              <Avatar member={m} />
+              <span style={{ fontSize: "0.78rem", fontWeight: 600, color: m.color }}>{m.name.split(" ")[0]}</span>
+            </div>
+          ))}
         </div>
 
-        <h1
-          style={{ fontSize: "1.8rem", fontWeight: 800, margin: "0 0 0.25rem" }}
-        >
-          Sanjeet Kumar
-        </h1>
-        <p
-          style={{
-            color: "var(--text-muted, #888)",
-            margin: "0 0 0.5rem",
-            fontSize: "1rem",
-          }}
-        >
-          Full Stack Developer · Spring Boot + React
-        </p>
-        <div
-          style={{
-            display: "flex",
-            gap: "0.5rem",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
+        {/* Tech tags */}
+        <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center", flexWrap: "wrap" }}>
           {["Java", "Spring Boot", "React", "MySQL"].map((tag) => (
             <span
               key={tag}
@@ -183,19 +298,41 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Contact Cards */}
+      {/* ── FILTER TABS ── */}
+      <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            className="tab-btn"
+            onClick={() => setActiveTab(tab)}
+            style={{
+              padding: "0.4rem 1rem",
+              borderRadius: "20px",
+              fontSize: "0.82rem",
+              fontWeight: 600,
+              color: activeTab === tab ? "#fff" : "var(--text-muted, #888)",
+              background: activeTab === tab ? "#e50914" : "rgba(255,255,255,0.06)",
+              border: `1px solid ${activeTab === tab ? "#e50914" : "rgba(255,255,255,0.12)"}`,
+            }}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
+
+      {/* ── CONTACT CARDS ── */}
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
           gap: "1rem",
-          maxWidth: 800,
+          maxWidth: 860,
           margin: "0 auto 3rem",
         }}
       >
-        {CONTACTS.map((c, i) => (
+        {filteredContacts.map((c, i) => (
           <div
-            key={c.platform}
+            key={`${c.member}-${c.platform}`}
             className="contact-card"
             style={{
               background: c.bg,
@@ -207,51 +344,35 @@ export default function Contact() {
               gap: "0.75rem",
             }}
           >
+            {/* Member badge */}
+            <div style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--text-muted,#888)", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+              {c.member}
+            </div>
+
             {/* Top row */}
-            <div
-              style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}
-            >
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
               <div
                 style={{
-                  width: 44,
-                  height: 44,
-                  borderRadius: "10px",
-                  background: c.bg,
-                  border: `1px solid ${c.border}`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: c.color,
-                  flexShrink: 0,
+                  width: 44, height: 44, borderRadius: "10px",
+                  background: c.bg, border: `1px solid ${c.border}`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  color: c.color, flexShrink: 0,
                 }}
               >
                 {c.icon}
               </div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: "0.95rem" }}>
-                  {c.platform}
-                </div>
-                <div
-                  style={{
-                    color: "var(--text-muted, #888)",
-                    fontSize: "0.78rem",
-                  }}
-                >
-                  {c.desc}
-                </div>
+                <div style={{ fontWeight: 700, fontSize: "0.95rem" }}>{c.platform}</div>
+                <div style={{ color: "var(--text-muted, #888)", fontSize: "0.78rem" }}>{c.desc}</div>
               </div>
             </div>
 
             {/* Handle */}
             <div
               style={{
-                background: "rgba(0,0,0,0.2)",
-                borderRadius: "8px",
-                padding: "0.5rem 0.75rem",
-                fontSize: "0.85rem",
-                color: c.color,
-                fontFamily: "monospace",
-                wordBreak: "break-all",
+                background: "rgba(0,0,0,0.2)", borderRadius: "8px",
+                padding: "0.5rem 0.75rem", fontSize: "0.85rem",
+                color: c.color, fontFamily: "monospace", wordBreak: "break-all",
               }}
             >
               {c.handle}
@@ -265,41 +386,24 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="contact-link-btn"
                 style={{
-                  flex: 1,
-                  padding: "0.55rem",
-                  background: c.color,
-                  color: "#fff",
-                  borderRadius: "8px",
-                  textDecoration: "none",
-                  textAlign: "center",
-                  fontSize: "0.82rem",
-                  fontWeight: 600,
-                  display: "block",
+                  flex: 1, padding: "0.55rem", background: c.color,
+                  color: "#fff", borderRadius: "8px", textDecoration: "none",
+                  textAlign: "center", fontSize: "0.82rem", fontWeight: 600, display: "block",
                 }}
               >
-                {c.platform === "Email"
-                  ? "Send Mail"
-                  : c.platform === "Phone / WhatsApp"
-                    ? "Call Now"
-                    : "Open →"}
+                {c.platform === "Email" ? "Send Mail" : c.platform === "Phone / WhatsApp" ? "Call Now" : "Open →"}
               </a>
-
               <button
-                onClick={() =>
-                  copyToClipboard(c.handle.replace(/^@/, ""), c.platform)
-                }
+                onClick={() => copyToClipboard(c.handle.replace(/^@/, ""), `${c.member}-${c.platform}`)}
                 style={{
                   padding: "0.55rem 0.75rem",
                   background: "rgba(255,255,255,0.06)",
                   border: "1px solid rgba(255,255,255,0.1)",
-                  borderRadius: "8px",
-                  color: "#fff",
-                  cursor: "pointer",
-                  fontSize: "0.82rem",
-                  transition: "all 0.15s",
+                  borderRadius: "8px", color: "#fff", cursor: "pointer",
+                  fontSize: "0.82rem", transition: "all 0.15s",
                 }}
               >
-                {copied === c.platform ? "✓ Copied" : "Copy"}
+                {copied === `${c.member}-${c.platform}` ? "✓ Copied" : "Copy"}
               </button>
             </div>
           </div>
@@ -307,14 +411,7 @@ export default function Contact() {
       </div>
 
       {/* Bottom note */}
-      <p
-        style={{
-          textAlign: "center",
-          color: "var(--text-muted, #666)",
-          fontSize: "0.85rem",
-          paddingBottom: "2rem",
-        }}
-      >
+      <p style={{ textAlign: "center", color: "var(--text-muted, #666)", fontSize: "0.85rem", paddingBottom: "2rem" }}>
         Built with ❤️ as a learning project · BookMyShow Clone
       </p>
     </div>
